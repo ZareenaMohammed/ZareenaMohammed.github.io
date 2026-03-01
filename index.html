@@ -1,213 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Zareena Muhammed | DevOps Engineer</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-<style>
-html{
-scroll-behavior:smooth;
-}
-
-body{
-margin:0;
-font-family:'Poppins', sans-serif;
-background:linear-gradient(-45deg,#0f172a,#1e293b,#111827,#0f172a);
-background-size:400% 400%;
-animation:gradientMove 12s ease infinite;
-color:white;
-transition:0.4s;
-}
-
-@keyframes gradientMove{
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
-}
-
-/* NAVBAR */
-.navbar{
-position:fixed;
-width:100%;
-top:0;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 60px;
-backdrop-filter:blur(10px);
-background:rgba(0,0,0,0.4);
-z-index:1000;
-}
-
-/* NAME */
-.brand{
-font-size:28px;
-font-weight:700;
-}
-
-.brand .first{
-color:#a855f7;
-animation:glow 2s infinite alternate;
-}
-
-.brand .last{
-color:white;
-}
-
-@keyframes glow{
-from{text-shadow:0 0 5px #a855f7;}
-to{text-shadow:0 0 25px #a855f7;}
-}
-
-/* NAV LINKS */
-.nav-links{
-display:flex;
-align-items:center;
-}
-
-.nav-links a{
-text-decoration:none;
-color:white;
-margin-left:25px;
-font-weight:500;
-transition:0.3s;
-}
-
-.nav-links a:hover{
-color:#a855f7;
-}
-
-/* TOGGLE BUTTON */
-.toggle-btn{
-margin-left:25px;
-padding:6px 14px;
-border-radius:20px;
-border:1px solid white;
-background:white;
-color:black;
-cursor:pointer;
-transition:0.3s;
-}
-
-.toggle-btn:hover{
-background:#a855f7;
-color:white;
-}
-
-/* HERO */
-.hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-padding:0 80px;
-max-width:900px;
-}
-
-.hero h1{
-font-size:42px;
-margin-bottom:20px;
-}
-
-.hero p{
-font-size:18px;
-line-height:1.8;
-margin-bottom:20px;
-}
-
-/* HIRE BUTTON */
-.hire-btn{
-display:inline-block;
-background:#a855f7;
-color:white;
-padding:14px 32px;
-border-radius:30px;
-text-decoration:none;
-font-weight:600;
-transition:0.3s;
-box-shadow:0 0 15px #a855f7;
-}
-
-.hire-btn:hover{
-transform:scale(1.05);
-box-shadow:0 0 30px #a855f7;
-}
-
-/* LIGHT MODE */
-.light-mode{
-background:white;
-color:black;
-animation:none;
-}
-
-.light-mode .navbar{
-background:rgba(255,255,255,0.7);
-}
-
-.light-mode .nav-links a{
-color:black;
-}
-
-.light-mode .brand .last{
-color:black;
-}
-
-.light-mode .toggle-btn{
-background:black;
-color:white;
-}
-</style>
+    <title>Zareena Mohammed | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="navbar">
-<div class="brand">
-<span class="first">Zareena</span>
-<span class="last"> Muhammed</span>
-</div>
+    <header>
+        <h1>Zareena Mohammed</h1>
+        <p>Web Developer | Front-End Enthusiast</p>
+        <a href="#contact" class="hire-btn">Hire Me Now</a>
+    </header>
 
-<div class="nav-links">
-<a href="#">Home</a>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#portfolio">Portfolio</a>
-<a href="#contact">Contact</a>
-<button class="toggle-btn" onclick="toggleMode()">Dark/Light</button>
-</div>
-</div>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I am a passionate web developer focused on creating clean,
+            responsive, and user-friendly websites.
+        </p>
+    </section>
 
-<div class="hero">
-<h1 id="typing"></h1>
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>GitHub</li>
+        </ul>
+    </section>
 
-<p>
-I am <strong>Zareena Muhammed</strong>, a Senior DevOps Engineer with 6+ years of experience designing and automating scalable cloud infrastructure across Amazon Web Services and Microsoft Azure.
-</p>
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>Portfolio Website</p>
+        <p>Landing Page Design</p>
+    </section>
 
-<p>
-Specialized in CI/CD, Kubernetes, Terraform, and delivering secure, high-availability production systems with zero-downtime deployments.
-</p>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: zareena@example.com</p>
 
-<a href="#contact" class="hire-btn">Hire Me Now 🚀</a>
-</div>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/zareena-muhammed8/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+            </a>
 
-<script>
-function toggleMode(){
-document.body.classList.toggle("light-mode");
-}
+            <a href="https://github.com/ZareenaMohammed" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+            </a>
+        </div>
+    </section>
 
-/* TYPING EFFECT */
-const text = "Hi, I'm Zareena Muhammed 👋";
-let i = 0;
-function typingEffect(){
-if(i < text.length){
-document.getElementById("typing").innerHTML += text.charAt(i);
-i++;
-setTimeout(typingEffect,80);
-}
-}
-typingEffect();
-</script>
+    <footer>
+        <p>© 2026 Zareena Mohammed</p>
+
+        <div class="footer-icons">
+            <a href="https://www.linkedin.com/in/zareena-muhammed8/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+            </a>
+
+            <a href="https://github.com/ZareenaMohammed" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+            </a>
+        </div>
+    </footer>
 
 </body>
 </html>
