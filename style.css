@@ -1,0 +1,29 @@
+/* Social Icons */
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    margin-right: 10px;
+}
+
+.social-icons img {
+    width: 28px;
+    height: 28px;
+    transition: 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer icons */
+.footer-icons {
+    margin-top: 10px;
+}
+
+.footer-icons img {
+    width: 22px;
+    height: 22px;
+    margin: 0 5px;
+}
