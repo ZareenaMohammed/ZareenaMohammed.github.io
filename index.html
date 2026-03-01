@@ -1,213 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Zareena Muhammed | DevOps Engineer</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zareena Muhammed | DevOps Engineer</title>
 
-<style>
-html{
-scroll-behavior:smooth;
-}
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Times New Roman", Times, serif;
+            background: linear-gradient(to right, #eef2f3, #ffffff);
+        }
 
-body{
-margin:0;
-font-family:'Poppins', sans-serif;
-background:linear-gradient(-45deg,#0f172a,#1e293b,#111827,#0f172a);
-background-size:400% 400%;
-animation:gradientMove 12s ease infinite;
-color:white;
-transition:0.4s;
-}
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+        }
 
-@keyframes gradientMove{
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
-}
+        h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
 
-/* NAVBAR */
-.navbar{
-position:fixed;
-width:100%;
-top:0;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 60px;
-backdrop-filter:blur(10px);
-background:rgba(0,0,0,0.4);
-z-index:1000;
-}
+        h2 {
+            font-size: 26px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
 
-/* NAME */
-.brand{
-font-size:28px;
-font-weight:700;
-}
+        .skills {
+            font-size: 18px;
+            margin-top: 10px;
+            color: #333;
+        }
 
-.brand .first{
-color:#a855f7;
-animation:glow 2s infinite alternate;
-}
+        .tagline {
+            font-size: 18px;
+            margin-top: 12px;
+            color: #555;
+        }
 
-.brand .last{
-color:white;
-}
+        .hire-btn {
+            margin-top: 25px;
+            padding: 8px 18px;
+            font-size: 14px;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
 
-@keyframes glow{
-from{text-shadow:0 0 5px #a855f7;}
-to{text-shadow:0 0 25px #a855f7;}
-}
-
-/* NAV LINKS */
-.nav-links{
-display:flex;
-align-items:center;
-}
-
-.nav-links a{
-text-decoration:none;
-color:white;
-margin-left:25px;
-font-weight:500;
-transition:0.3s;
-}
-
-.nav-links a:hover{
-color:#a855f7;
-}
-
-/* TOGGLE BUTTON */
-.toggle-btn{
-margin-left:25px;
-padding:6px 14px;
-border-radius:20px;
-border:1px solid white;
-background:white;
-color:black;
-cursor:pointer;
-transition:0.3s;
-}
-
-.toggle-btn:hover{
-background:#a855f7;
-color:white;
-}
-
-/* HERO */
-.hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-padding:0 80px;
-max-width:900px;
-}
-
-.hero h1{
-font-size:42px;
-margin-bottom:20px;
-}
-
-.hero p{
-font-size:18px;
-line-height:1.8;
-margin-bottom:20px;
-}
-
-/* HIRE BUTTON */
-.hire-btn{
-display:inline-block;
-background:#a855f7;
-color:white;
-padding:14px 32px;
-border-radius:30px;
-text-decoration:none;
-font-weight:600;
-transition:0.3s;
-box-shadow:0 0 15px #a855f7;
-}
-
-.hire-btn:hover{
-transform:scale(1.05);
-box-shadow:0 0 30px #a855f7;
-}
-
-/* LIGHT MODE */
-.light-mode{
-background:white;
-color:black;
-animation:none;
-}
-
-.light-mode .navbar{
-background:rgba(255,255,255,0.7);
-}
-
-.light-mode .nav-links a{
-color:black;
-}
-
-.light-mode .brand .last{
-color:black;
-}
-
-.light-mode .toggle-btn{
-background:black;
-color:white;
-}
-</style>
+        .hire-btn:hover {
+            background-color: #1a252f;
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="navbar">
-<div class="brand">
-<span class="first">Zareena</span>
-<span class="last"> Muhammed</span>
-</div>
+<section class="hero">
 
-<div class="nav-links">
-<a href="#">Home</a>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#portfolio">Portfolio</a>
-<a href="#contact">Contact</a>
-<button class="toggle-btn" onclick="toggleMode()">Dark/Light</button>
-</div>
-</div>
+    <h1>Hi 👋 I am Zareena Muhammed</h1>
 
-<div class="hero">
-<h1 id="typing"></h1>
+    <h2><b>I am a Senior DevOps Engineer</b></h2>
 
-<p>
-I am <strong>Zareena Muhammed</strong>, a Senior DevOps Engineer with 6+ years of experience designing and automating scalable cloud infrastructure across Amazon Web Services and Microsoft Azure.
-</p>
+    <p class="skills">
+        Multi-Cloud (AWS & Azure) • Kubernetes (EKS & AKS) • Terraform • CI/CD • Cloud Automation
+    </p>
 
-<p>
-Specialized in CI/CD, Kubernetes, Terraform, and delivering secure, high-availability production systems with zero-downtime deployments.
-</p>
+    <p class="tagline">
+        Building resilient, automated, and production-ready cloud platforms.
+    </p>
 
-<a href="#contact" class="hire-btn">Hire Me Now 🚀</a>
-</div>
+    <button class="hire-btn">Hire Me Now</button>
 
-<script>
-function toggleMode(){
-document.body.classList.toggle("light-mode");
-}
-
-/* TYPING EFFECT */
-const text = "Hi, I'm Zareena Muhammed 👋";
-let i = 0;
-function typingEffect(){
-if(i < text.length){
-document.getElementById("typing").innerHTML += text.charAt(i);
-i++;
-setTimeout(typingEffect,80);
-}
-}
-typingEffect();
-</script>
+</section>
 
 </body>
 </html>
