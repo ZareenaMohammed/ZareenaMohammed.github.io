@@ -1,123 +1,213 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Zareena Mohammed | DevOps Engineer</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(-45deg, #0f172a, #1e293b, #2563eb, #7c3aed);
-            background-size: 400% 400%;
-            animation: gradientBG 10s ease infinite;
-            color: white;
-            text-align: center;
-        }
+<title>Zareena Muhammed | DevOps Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-        @keyframes gradientBG {
-            0% {background-position: 0% 50%;}
-            50% {background-position: 100% 50%;}
-            100% {background-position: 0% 50%;}
-        }
+<style>
+html{
+scroll-behavior:smooth;
+}
 
-        header {
-            padding: 80px 20px;
-        }
+body{
+margin:0;
+font-family:'Poppins', sans-serif;
+background:linear-gradient(-45deg,#0f172a,#1e293b,#111827,#0f172a);
+background-size:400% 400%;
+animation:gradientMove 12s ease infinite;
+color:white;
+transition:0.4s;
+}
 
-        h1 {
-            font-size: 50px;
-            margin-bottom: 10px;
-        }
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
 
-        .role {
-            font-size: 20px;
-            color: #facc15;
-            margin-bottom: 30px;
-        }
+/* NAVBAR */
+.navbar{
+position:fixed;
+width:100%;
+top:0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+backdrop-filter:blur(10px);
+background:rgba(0,0,0,0.4);
+z-index:1000;
+}
 
-        .btn {
-            display: inline-block;
-            padding: 12px 25px;
-            margin: 10px;
-            border-radius: 25px;
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+/* NAME */
+.brand{
+font-size:28px;
+font-weight:700;
+}
 
-        .linkedin {
-            background-color: #0a66c2;
-        }
+.brand .first{
+color:#a855f7;
+animation:glow 2s infinite alternate;
+}
 
-        .resume {
-            background-color: #22c55e;
-        }
+.brand .last{
+color:white;
+}
 
-        .btn:hover {
-            transform: scale(1.1);
-        }
+@keyframes glow{
+from{text-shadow:0 0 5px #a855f7;}
+to{text-shadow:0 0 25px #a855f7;}
+}
 
-        section {
-            padding: 50px 20px;
-        }
+/* NAV LINKS */
+.nav-links{
+display:flex;
+align-items:center;
+}
 
-        .card {
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-            padding: 20px;
-            margin: 20px auto;
-            width: 80%;
-            border-radius: 15px;
-        }
+.nav-links a{
+text-decoration:none;
+color:white;
+margin-left:25px;
+font-weight:500;
+transition:0.3s;
+}
 
-        h2 {
-            color: #38bdf8;
-        }
-    </style>
+.nav-links a:hover{
+color:#a855f7;
+}
+
+/* TOGGLE BUTTON */
+.toggle-btn{
+margin-left:25px;
+padding:6px 14px;
+border-radius:20px;
+border:1px solid white;
+background:white;
+color:black;
+cursor:pointer;
+transition:0.3s;
+}
+
+.toggle-btn:hover{
+background:#a855f7;
+color:white;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+padding:0 80px;
+max-width:900px;
+}
+
+.hero h1{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:18px;
+line-height:1.8;
+margin-bottom:20px;
+}
+
+/* HIRE BUTTON */
+.hire-btn{
+display:inline-block;
+background:#a855f7;
+color:white;
+padding:14px 32px;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+box-shadow:0 0 15px #a855f7;
+}
+
+.hire-btn:hover{
+transform:scale(1.05);
+box-shadow:0 0 30px #a855f7;
+}
+
+/* LIGHT MODE */
+.light-mode{
+background:white;
+color:black;
+animation:none;
+}
+
+.light-mode .navbar{
+background:rgba(255,255,255,0.7);
+}
+
+.light-mode .nav-links a{
+color:black;
+}
+
+.light-mode .brand .last{
+color:black;
+}
+
+.light-mode .toggle-btn{
+background:black;
+color:white;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-    <h1>Zareena Mohammed</h1>
-    <div class="role">
-        Senior DevOps Engineer | Multi-Cloud (AWS & Azure) |
-        Kubernetes (EKS & AKS) | Terraform | CI/CD | Cloud Automation
-    </div>
+<div class="navbar">
+<div class="brand">
+<span class="first">Zareena</span>
+<span class="last"> Muhammed</span>
+</div>
 
-    <a href="https://www.linkedin.com/in/zareena-muhammed8" target="_blank" class="btn linkedin">🔗 LinkedIn</a>
-    <a href="resume.pdf" target="_blank" class="btn resume">📄 Download Resume</a>
-</header>
+<div class="nav-links">
+<a href="#">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#contact">Contact</a>
+<button class="toggle-btn" onclick="toggleMode()">Dark/Light</button>
+</div>
+</div>
 
-<section>
-    <h2>About Me</h2>
-    <div class="card">
-        🚀 Passionate Multi-Cloud DevOps Engineer with expertise in AWS & Azure.  
-        Specialized in Kubernetes (EKS & AKS), Terraform Infrastructure as Code, 
-        CI/CD automation, monitoring with Prometheus & Grafana, and building 
-        highly available production systems.
-    </div>
-</section>
+<div class="hero">
+<h1 id="typing"></h1>
 
-<section>
-    <h2>Projects</h2>
+<p>
+I am <strong>Zareena Muhammed</strong>, a Senior DevOps Engineer with 6+ years of experience designing and automating scalable cloud infrastructure across Amazon Web Services and Microsoft Azure.
+</p>
 
-    <div class="card">
-        ☸️ <b>AKS Production Deployment</b><br>
-        Designed and deployed production-ready AKS cluster with auto-scaling, RBAC, monitoring and CI/CD integration.
-    </div>
+<p>
+Specialized in CI/CD, Kubernetes, Terraform, and delivering secure, high-availability production systems with zero-downtime deployments.
+</p>
 
-    <div class="card">
-        🌩️ <b>Multi-Cloud Terraform Infrastructure</b><br>
-        Built reusable Terraform modules for AWS & Azure with automated provisioning.
-    </div>
+<a href="#contact" class="hire-btn">Hire Me Now 🚀</a>
+</div>
 
-    <div class="card">
-        🔄 <b>End-to-End CI/CD Pipeline</b><br>
-        Implemented Jenkins & Azure DevOps pipelines with Docker builds and automated deployments to EKS & AKS.
-    </div>
+<script>
+function toggleMode(){
+document.body.classList.toggle("light-mode");
+}
 
-</section>
+/* TYPING EFFECT */
+const text = "Hi, I'm Zareena Muhammed 👋";
+let i = 0;
+function typingEffect(){
+if(i < text.length){
+document.getElementById("typing").innerHTML += text.charAt(i);
+i++;
+setTimeout(typingEffect,80);
+}
+}
+typingEffect();
+</script>
 
 </body>
 </html>
