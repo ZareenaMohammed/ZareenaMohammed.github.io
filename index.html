@@ -4,81 +4,119 @@
     <title>Zareena Mohammed | DevOps Engineer</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            background-color: #0f172a;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(-45deg, #0f172a, #1e293b, #2563eb, #7c3aed);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
             color: white;
             text-align: center;
         }
+
+        @keyframes gradientBG {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
         header {
-            padding: 60px;
-            background: linear-gradient(90deg, #2563eb, #7c3aed);
+            padding: 80px 20px;
         }
+
         h1 {
-            margin: 0;
-            font-size: 40px;
+            font-size: 50px;
+            margin-bottom: 10px;
         }
-        section {
-            padding: 40px;
+
+        .role {
+            font-size: 20px;
+            color: #facc15;
+            margin-bottom: 30px;
         }
-        .card {
-            background-color: #1e293b;
-            margin: 20px auto;
-            padding: 20px;
-            width: 80%;
-            border-radius: 10px;
-        }
-        a {
-            color: #38bdf8;
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            margin: 10px;
+            border-radius: 25px;
             text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .linkedin {
+            background-color: #0a66c2;
+        }
+
+        .resume {
+            background-color: #22c55e;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+        }
+
+        section {
+            padding: 50px 20px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 15px;
+        }
+
+        h2 {
+            color: #38bdf8;
         }
     </style>
 </head>
+
 <body>
 
 <header>
-    <h1>Senior DevOps Engineer</h1>
-    <p>AWS | Azure | Kubernetes (EKS & AKS) | Terraform | CI/CD | Cloud Automation</p>
+    <h1>Zareena Mohammed</h1>
+    <div class="role">
+        Senior DevOps Engineer | Multi-Cloud (AWS & Azure) |
+        Kubernetes (EKS & AKS) | Terraform | CI/CD | Cloud Automation
+    </div>
+
+    <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" class="btn linkedin">🔗 LinkedIn</a>
+    <a href="resume.pdf" target="_blank" class="btn resume">📄 Download Resume</a>
 </header>
 
 <section>
     <h2>About Me</h2>
     <div class="card">
-        <p>Multi-Cloud DevOps Engineer with experience in designing and automating scalable cloud infrastructure across AWS and Azure. Specialized in Kubernetes, CI/CD pipelines, Infrastructure as Code, and monitoring solutions.</p>
-    </div>
-</section>
-
-<section>
-    <h2>Skills</h2>
-    <div class="card">
-        AWS (EC2, EKS, VPC, CloudWatch) <br>
-        Azure (AKS, VNet, VMSS, Azure Monitor) <br>
-        Terraform | ARM | CloudFormation <br>
-        Jenkins | Azure DevOps | GitHub Actions <br>
-        Docker | Kubernetes <br>
-        Prometheus | Grafana <br>
-        Linux | Bash Scripting
+        🚀 Passionate Multi-Cloud DevOps Engineer with expertise in AWS & Azure.  
+        Specialized in Kubernetes (EKS & AKS), Terraform Infrastructure as Code, 
+        CI/CD automation, monitoring with Prometheus & Grafana, and building 
+        highly available production systems.
     </div>
 </section>
 
 <section>
     <h2>Projects</h2>
-    <div class="card">
-        <b>AKS Deployment with CI/CD</b><br>
-        Designed and deployed production-ready AKS cluster with automated CI/CD pipeline.
-    </div>
-    <div class="card">
-        <b>Terraform Multi-Environment Infrastructure</b><br>
-        Built reusable Terraform modules for AWS and Azure environments.
-    </div>
-</section>
 
-<section>
-    <h2>Contact</h2>
     <div class="card">
-        <p>Email: your-email@example.com</p>
-        <p>GitHub: <a href="https://github.com/ZareenaMohammed">github.com/ZareenaMohammed</a></p>
+        ☸️ <b>AKS Production Deployment</b><br>
+        Designed and deployed production-ready AKS cluster with auto-scaling, RBAC, monitoring and CI/CD integration.
     </div>
+
+    <div class="card">
+        🌩️ <b>Multi-Cloud Terraform Infrastructure</b><br>
+        Built reusable Terraform modules for AWS & Azure with automated provisioning.
+    </div>
+
+    <div class="card">
+        🔄 <b>End-to-End CI/CD Pipeline</b><br>
+        Implemented Jenkins & Azure DevOps pipelines with Docker builds and automated deployments to EKS & AKS.
+    </div>
+
 </section>
 
 </body>
